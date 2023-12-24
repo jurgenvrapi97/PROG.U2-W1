@@ -64,6 +64,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 4;
 }
 
 #title h1 {
@@ -101,6 +102,7 @@ button {
   margin-bottom: 0.8em;
 }
 .sezione {
+  position: relative;
   width: 450px;
   display: flex;
   margin-bottom: 50px;
@@ -171,6 +173,7 @@ p {
 }
 
 .slice {
+  position: relative;
   display: flex;
   height: 200px;
   align-items: center;
@@ -179,6 +182,7 @@ p {
 .margin {
   width: 450px;
   margin-right: 20px;
+  position: relative;
 }
 
 .img-destra img {
@@ -228,4 +232,87 @@ li {
 h2 {
   font-size: 1em;
   font-weight: 700;
+}
+
+.bookmark {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 800px) {
+  #bottom {
+    display: flex;
+    /* justify-content: space-evenly; */
+    flex-direction: column-reverse;
+    width: 100%;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  ul {
+    display: none;
+  }
+  #btn-aside {
+    border: none;
+  }
+
+  .sezione {
+    width: 300px;
+  }
+  #trading {
+    margin-left: 0;
+  }
+  #all-section {
+    margin-left: 0;
+    justify-content: flex-start;
+  }
+  #m {
+    width: 700px;
+    height: 402px;
+    position: static;
+  }
+
+  #title h1 {
+    font-size: 7em;
+    margin-bottom: 0.2em;
+    margin-left: 10px;
+  }
+
+  #title p {
+    margin-bottom: 3em;
+    margin-left: 10px;
+  }
+
+  #title button {
+    margin-left: 10px;
+    width: 240px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #m {
+    display: none;
+  }
+
+  #title h1 {
+    font-size: 6em;
+  }
+
+  aside {
+    align-items: center;
+  }
+
+  .margin {
+    width: 300px;
+  }
+
+  .none {
+    display: none;
+  }
+  #nav-bar {
+    justify-content: flex-end;
+  }
+  #login {
+    margin-right: 20px;
+  }
 }
